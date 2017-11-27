@@ -1,16 +1,37 @@
 *[class*="col-"]{
   float: left;
-  min-height: 30px;
-  padding: 40px;
+  min-height: 7px;
+  padding: 12px;
+  display: block;
 }
 
 @media (max-width: 575px) {
-  .row {
-    display: block;
+  .panda {
+    height: 200px;
+  }
+  header {
+    height: 150px;    
+    padding-top: 30px;
+  }
+  header h1{
+    font-size: 32px;
+  }
+  header p {
+    font-size: 15px;
+    margin: 0 auto;
+  }
+  .about-info {
+    margin-top: 20px;
+  }
+  footer p{
+    font-size: 10px;
+  }
+  .pictures {
+    padding-left: 20px;
   }
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
+/*@media (min-width: 576px) and (max-width: 767px) {
 
 }
 
@@ -25,7 +46,7 @@
 @media (min-width: 1200px) {
 
 }
-
+*/
 
 /*  12 COLUMN : RESPONSIVE GRID SYSTEM
   DEVELOPER : DENIS LEBLANC
@@ -71,11 +92,6 @@
       
                   
 /* DEFAULT COLUMN STYLES */
-.col { 
-  display: block;
-  float: left;
-  width: 100%;
-}
 
 @media ( min-width : 768px ) {
   
