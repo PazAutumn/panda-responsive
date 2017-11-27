@@ -1,11 +1,13 @@
 *[class*="col-"]{
   float: left;
-  min-height: 7px;
-  padding: 12px;
+  min-height: 30px;
+  padding: 40px;
 }
 
 @media (max-width: 575px) {
-  
+  .row {
+    display: block;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {

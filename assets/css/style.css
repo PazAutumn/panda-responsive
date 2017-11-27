@@ -19,13 +19,12 @@ header {
   color: white;
 }
 
-header h1 {
+header span {
   padding-top: 80px;
 }
 
 header p {
   font-size: 20px;
-  padding-top: 20px;
 }
 
 img {
@@ -40,18 +39,18 @@ img {
 }
 
 .panda.uno {
-  height: 500px;
+  height: auto;
   background-image: url(../img/uno.jpg);
 }
 
 .panda.dos {
-  height: 700px;
+  height: auto;
   background-image: url(../img/dos.jpg);
   background-position: initial;
 }
 
 .panda.tres {
-  height: 700px;
+  height: auto;
   background-image: url(../img/tres.jpg);
   background-position: initial;
 }
