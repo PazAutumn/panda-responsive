@@ -1,0 +1,120 @@
+*[class*="col-"]{
+  float: left;
+  min-height: 7px;
+  padding: 12px;
+}
+
+@media (max-width: 575px) {
+  
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+
+/*  12 COLUMN : RESPONSIVE GRID SYSTEM
+  DEVELOPER : DENIS LEBLANC
+  URL : http://responsive.gs
+  VERSION : 3.0
+  LICENSE : GPL & MIT */
+
+
+/*  SET ALL ELEMENTS TO BOX-SIZING : BORDER-BOX */
+* { 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/scripts/boxsizing.htc); 
+  /*  If you need support for IE7 and lower make 
+    sure the boxsizing.htc file is linked properly.
+    More info here:  https://github.com/Schepp/box-sizing-polyfill */
+}
+
+
+/*  MAIN CONTAINER 
+  Set the width to whatever you want the width of your site to be. */
+.container { 
+  max-width: 1000px;
+  margin: 0 auto; 
+}
+
+/*  SELF CLEARING FLOATS - CLEARFIX METHOD */
+.container:after,
+.row:after, 
+.col:after, 
+.clr:after, 
+.group:after { 
+  content: ""; 
+  display: table; 
+  clear: both; 
+}
+
+/*  DEFAULT ROW STYLES 
+  Set bottom padding according to preference */
+.row { padding-bottom: 0em;
+}
+      
+                  
+/* DEFAULT COLUMN STYLES */
+.col { 
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+@media ( min-width : 768px ) {
+  
+  .gutters .col {
+    margin-left: 2%;
+  }
+  
+  .gutters .col:first-child { 
+    margin-left: 0; 
+  }
+}
+
+
+
+
+/*  COLUMN WIDTH ON DISPLAYS +768px 
+  You might need to play with media queries here to suite your design. */
+@media ( min-width : 768px ) {
+  .col-1 { width: 8.33333333333%; }
+  .col-2 { width: 16.6666666667%; }
+  .col-3 { width: 25%; }
+  .col-4 { width: 33.3333333333%; }
+  .col-5 { width: 41.6666666667%; }
+  .col-6 { width: 50%; }
+  .col-7 { width: 58.3333333333%; }
+  .col-8 { width: 66.6666666667%; }
+  .col-9 { width: 75%; }
+  .col-10 { width: 83.3333333333%; }
+  .col-11 { width: 91.6666666667%; }
+  .col-12 { width: 100%; }
+  
+  .gutters .col-1 { width: 6.5%; }
+  .gutters .col-2 { width: 15.0%; }
+  .gutters .col-3 { width: 23.5%; }
+  .gutters .col-4 { width: 32.0%; }
+  .gutters .col-5 { width: 40.5%; }
+  .gutters .col-6 { width: 49.0%; }
+  .gutters .col-7 { width: 57.5%; }
+  .gutters .col-8 { width: 66.0%; }
+  .gutters .col-9 { width: 74.5%; }
+  .gutters .col-10 { width: 83.0%; }
+  .gutters .col-11 { width: 91.5%; }
+  .gutters .col-12 { width: 100%; }
+}

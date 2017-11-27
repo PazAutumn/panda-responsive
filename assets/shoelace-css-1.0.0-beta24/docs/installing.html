@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="How to install Shoelace.css.">
+  <link rel="icon" href="../source/img/favicon.png">
+  <link rel="stylesheet" href="../dist/shoelace.css">
+  <link rel="stylesheet" href="../source/css/_docs.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/AGMStudio/prism-theme-one-dark/f81fe477/prism-onedark.css">
+  <title>Installing</title>
+</head>
+<body>
+
+  <header id="head" class="text-center">
+    <h1>
+      <a href="../index.html">
+        <img src="../source/img/wordmark.svg" alt="Shoelace logo">
+      </a>
+    </h1>
+
+    <p class="text-secondary text-small">
+      A back to the basics CSS starter kit. For when you don’t need the whole boot.
+    </p>
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul id="nav">
+          <li><a href="installing.html">Installing</a></li>
+          <li><a href="customizing.html">Customizing</a></li>
+          <li><a href="content.html">Content</a></li>
+          <li><a href="alerts.html">Alerts</a></li>
+          <li><a href="badges.html">Badges</a></li>
+          <li><a href="buttons.html">Buttons</a></li>
+          <li><a href="dropdowns.html">Dropdowns</a></li>
+          <li><a href="file-buttons.html">File Buttons</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="grid-system.html">Grid System</a></li>
+          <li><a href="loaders.html">Loaders</a></li>
+          <li><a href="progress-bars.html">Progress Bars</a></li>
+          <li><a href="switches.html">Switches</a></li>
+          <li><a href="tabs.html">Tabs</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="utilities.html">Utilities</a></li>
+          <li><a href="icons.html">Icons</a></li>
+          <li><a href="browser-support.html">Browser Support</a></li>
+          <li><a href="attribution.html">Attribution</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-9">
+        <div id="content">
+          <h2 id="installing">Installing</h2>
+<p>There are two ways to use Shoelace. If you want to get things up and running quickly, use the <code>dist/</code> version or the <a href="#cdn">CDN version</a>. This version isn’t customizable, nor can you use future CSS features with it. It’s primarily intended for prototyping.</p>
+<p>If you’re developing a production app, you should <a href="#building-from-source">build Shoelace from source</a>. This version is completely customizable, modular, and let’s you use future CSS features <em>today</em>.</p>
+<p><strong>Note:</strong> To make certain components interactive (e.g. dropdowns and tabs), you’ll need to load <a href="https://cdnjs.com/libraries/jquery/">jQuery</a> or <a href="https://cdnjs.com/libraries/zepto/">Zepto</a> before <code>shoelace.js</code>.</p>
+<h3 id="cdn">CDN</h3>
+<p>This is the best approach for prototyping, however, this version isn’t customizable and doesn’t support future CSS features. To load Shoelace via CDN, add this to your <code>&lt;head&gt;</code>:</p>
+<pre><code class="lang-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.shoelace.style/1.0.0-beta24/shoelace.css&quot;&gt;
+</code></pre>
+<p>And this before <code>&lt;/body&gt;</code> but after jQuery/Zepto:</p>
+<pre><code class="lang-html">&lt;script src=&quot;https://cdn.shoelace.style/1.0.0-beta24/shoelace.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>This service is provided free, courtesy of <a href="https://keycdn.com/">KeyCDN</a>.</p>
+<h3 id="building-from-source">Building From Source</h3>
+<p>To make the most out of Shoelace, you should build it from source. This will let you use future CSS features <em>today</em>, such as <a href="https://www.w3.org/TR/css-variables/">CSS variables</a>, <a href="http://tabatkins.github.io/specs/css-nesting/">nesting</a>, <a href="https://drafts.csswg.org/css-color/#modifying-colors">color functions</a>, <a href="http://cssnext.io/features/">and more</a>. It also gives you complete control over customizing Shoelace.</p>
+<p>The recommended way to build Shoelace is with <a href="http://cssnext.io/">cssnext</a>. There are instructions for webpack, gulp, grunt, browserify, and others located on the <a href="http://cssnext.io/setup/">setup page</a>.</p>
+<p>You can <a href="https://github.com/claviska/shoelace-css/releases">download Shoelace</a> from GitHub, but it’s probably better to use the npm version:</p>
+<pre><code class="lang-text">npm install shoelace-css
+</code></pre>
+<p>The main source file is <a href="../source/css/shoelace.css"><code>source/css/shoelace.css</code></a>. This bootstraps the entire project by importing core variables and all of Shoelace’s components.</p>
+<p>If you don’t need everything, just load <a href="../source/css/variables.css"><code>source/css/variables.css</code></a> along with the components you want.</p>
+
+        </div>
+      </div>
+  </main>
+
+  <footer id="foot">
+    <a href="../index.html">
+      <img src="../source/img/wordmark.svg" alt="Shoelace logo">
+    </a>
+
+    <p class="text-small text-secondary">
+      1.0.0-beta24
+    </p>
+
+    <p class="mar-y-sm text-center">
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/fork" data-size="large" aria-label="Fork claviska/shoelace-css on GitHub">Fork</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/releases" data-icon="octicon-cloud-download" data-size="large" aria-label="Download claviska/shoelace-css on GitHub">Download</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue claviska/shoelace-css on GitHub">Report a Bug</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star claviska/shoelace-css on GitHub">Star</a>
+    </p>
+
+    <p>
+      <a href="https://twitter.com/shoelacecss" class="button button-info" style="margin-bottom: 1.2rem;">Follow</a>
+      <a href="https://paypal.me/claviska" class="button button-success" style="margin-bottom: 1.2rem;">Donate</a>
+    </p>
+
+    <p class="text-small text-secondary">
+      <a href="https://keycdn.com/" class="text-secondary">Accelerated by KeyCDN</a> &middot;
+      &copy; A Beautiful Site, LLC
+    </p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+  <script src="../dist/shoelace.js"></script>
+  <script>
+    $(function() {
+      // Highlight current nav item
+      $('#nav a').each(function() {
+        if(this.pathname === location.pathname) {
+          $(this).addClass('current');
+        }
+      });
+
+      // Intercept dropdown clicks for the demo
+      $('.dropdown').on('select', function(event) {
+        event.preventDefault();
+      });
+    });
+  </script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

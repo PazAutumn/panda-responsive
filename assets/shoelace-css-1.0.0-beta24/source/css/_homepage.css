@@ -1,0 +1,24 @@
+body {
+  border-top: solid .3rem #0074d9;
+}
+
+#head {
+  padding: 0 2rem;
+  margin: 2rem 0;
+}
+
+#head img {
+  width: 24rem;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+pre {
+  margin-bottom: 1rem !important; /* Prism overrides our bottom margin */
+}
+
+pre code {
+  white-space: pre;
+  padding: 0;
+  display: block;
+}

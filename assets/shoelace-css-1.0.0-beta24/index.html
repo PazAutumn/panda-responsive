@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="For when you don’t need the whole boot.">
+  <link rel="icon" href="../source/img/favicon.png">
+  <link rel="stylesheet" href="../dist/shoelace.css">
+  <link rel="stylesheet" href="../source/css/_homepage.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/AGMStudio/prism-theme-one-dark/f81fe477/prism-onedark.css">
+  <title>Shoelace.css – a back to the basics CSS starter kit</title>
+</head>
+<body>
+
+  <header id="head" class="text-center">
+    <h1><img src="../source/img/wordmark.svg" alt="Shoelace logo"></h1>
+
+    <p class="text-secondary text-small">
+      A back to the basics CSS starter kit. For when you don’t need the whole boot.
+    </p>
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <p>
+          Shoelace.css is a lightweight, forward-thinking CSS library built with future CSS syntax.
+          It’s easy to use and highly customizable. Bootstrap users will find it familiar, yet
+          refreshing.
+        </p>
+
+        <p>
+          You can use Shoelace with just about any browser. The CDN version is great for
+          prototyping, but to take advantage of all its features you should
+          <a href="docs/installing.html#building-from-source">build Shoelace from source</a>.
+        </p>
+
+        <p>
+          Here is the CSS you <em>could</em> be writing:
+        </p>
+
+<pre><code class="language-css">:root {
+  /* CSS variables */
+  --state-primary: #09d;
+
+  /* Color functions */
+  --alert-bg-color: color(var(--state-primary) tint(75%));
+  --alert-color: color(var(--state-primary) lightness(25%));
+}
+
+/* Nested selectors */
+.alert {
+  background-color: var(--alert-bg-color);
+  color: var(--alert-color);
+
+  &amp;.alert-lg {
+    font-size: 2rem;
+  }
+}
+</code></pre>
+
+        <p>
+          <a href="http://cssnext.io/features/">CSS has a really bright future</a>, and you can use
+          most of its upcoming features <em>today</em> with Shoelace + cssnext. You no longer need
+          Less or Sass to do amazing things with CSS.
+        </p>
+
+        <p>
+          Shoelace was created by <a href="https://twitter.com/claviska">@claviska</a> for
+          <a href="https://www.surrealcms.com/">Surreal CMS</a>. You can use it for free under the
+          terms of the MIT license.
+        </p>
+
+        <div class="mar-y-md text-center">
+          <a href="docs/installing.html" class="button button-xl">Documentation &rarr;</a>
+        </div>
+
+        <p class="text-center">
+          <a class="github-button" href="https://github.com/claviska/shoelace-css/fork" data-size="large" aria-label="Fork claviska/shoelace-css on GitHub">Fork</a>
+          <a class="github-button" href="https://github.com/claviska/shoelace-css/releases" data-icon="octicon-cloud-download" data-size="large" aria-label="Download claviska/shoelace-css on GitHub">Download</a>
+          <a class="github-button" href="https://github.com/claviska/shoelace-css/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue claviska/shoelace-css on GitHub">Report a Bug</a>
+          <a class="github-button" href="https://github.com/claviska/shoelace-css" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star claviska/shoelace-css on GitHub">Star</a>
+        </p>
+
+        <p class="text-center text-small text-secondary">
+          <a href="https://keycdn.com/" class="text-secondary">Accelerated by KeyCDN</a> &middot;
+          &copy; A Beautiful Site, LLC
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

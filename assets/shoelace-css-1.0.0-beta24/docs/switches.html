@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="These pure CSS switches can be used as a checkbox replacement.">
+  <link rel="icon" href="../source/img/favicon.png">
+  <link rel="stylesheet" href="../dist/shoelace.css">
+  <link rel="stylesheet" href="../source/css/_docs.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/AGMStudio/prism-theme-one-dark/f81fe477/prism-onedark.css">
+  <title>Switches</title>
+</head>
+<body>
+
+  <header id="head" class="text-center">
+    <h1>
+      <a href="../index.html">
+        <img src="../source/img/wordmark.svg" alt="Shoelace logo">
+      </a>
+    </h1>
+
+    <p class="text-secondary text-small">
+      A back to the basics CSS starter kit. For when you don’t need the whole boot.
+    </p>
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul id="nav">
+          <li><a href="installing.html">Installing</a></li>
+          <li><a href="customizing.html">Customizing</a></li>
+          <li><a href="content.html">Content</a></li>
+          <li><a href="alerts.html">Alerts</a></li>
+          <li><a href="badges.html">Badges</a></li>
+          <li><a href="buttons.html">Buttons</a></li>
+          <li><a href="dropdowns.html">Dropdowns</a></li>
+          <li><a href="file-buttons.html">File Buttons</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="grid-system.html">Grid System</a></li>
+          <li><a href="loaders.html">Loaders</a></li>
+          <li><a href="progress-bars.html">Progress Bars</a></li>
+          <li><a href="switches.html">Switches</a></li>
+          <li><a href="tabs.html">Tabs</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="utilities.html">Utilities</a></li>
+          <li><a href="icons.html">Icons</a></li>
+          <li><a href="browser-support.html">Browser Support</a></li>
+          <li><a href="attribution.html">Attribution</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-9">
+        <div id="content">
+          <h2 id="switches">Switches</h2>
+<p>Switches provide an alternative to standard checkboxes. Many people find them more intuitive and easier to use, especially on mobile devices. Shoelace provides a way to create beautiful, animated switches with pure CSS.</p>
+<p>Because this is a pure CSS solution, there are a couple important things to remember:</p>
+<ul>
+<li>Each switch must have a unique <code>id</code></li>
+<li>The <code>&lt;label&gt;</code> must have a <code>for</code> attribute that references the switch <code>id</code></li>
+<li>The <code>&lt;label&gt;</code> must come <strong>after</strong> the checkbox, otherwise the control won’t render</li>
+</ul>
+<p>The markup for a switch looks like this:</p>
+<pre><code class="lang-html">&lt;span class=&quot;switch&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch-1&quot;&gt;
+  &lt;label for=&quot;switch-1&quot;&gt;Switch 1&lt;/label&gt;
+&lt;/span&gt;
+
+&lt;span class=&quot;switch&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch-2&quot; checked&gt;
+  &lt;label for=&quot;switch-2&quot;&gt;Switch 2&lt;/label&gt;
+&lt;/span&gt;
+</code></pre>
+<div class="input-field">
+  <span class="switch">
+    <input type="checkbox" id="switch-1">
+    <label for="switch-1">Switch 1</label>
+  </span>
+
+  <span class="switch">
+    <input type="checkbox" id="switch-2" checked>
+    <label for="switch-2">Switch 2</label>
+  </span>
+</div>
+
+<p>Use the <code>switch-[xs|sm|lg|xl]</code> modifiers to change the size of a switch.</p>
+<pre><code class="lang-html">&lt;span class=&quot;switch switch-xs&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch-xs&quot;&gt;
+  &lt;label for=&quot;switch-xs&quot;&gt;XS&lt;/label&gt;
+&lt;/span&gt;
+
+&lt;span class=&quot;switch switch-sm&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch-sm&quot;&gt;
+  &lt;label for=&quot;switch-sm&quot;&gt;SM&lt;/label&gt;
+&lt;/span&gt;
+
+&lt;span class=&quot;switch&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch-default&quot;&gt;
+  &lt;label for=&quot;switch-default&quot;&gt;Default&lt;/label&gt;
+&lt;/span&gt;
+
+&lt;span class=&quot;switch switch-lg&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch-lg&quot;&gt;
+  &lt;label for=&quot;switch-lg&quot;&gt;LG&lt;/label&gt;
+&lt;/span&gt;
+
+&lt;span class=&quot;switch switch-xl&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch-xl&quot;&gt;
+  &lt;label for=&quot;switch-xl&quot;&gt;XL&lt;/label&gt;
+&lt;/span&gt;
+</code></pre>
+<div class="input-field">
+  <span class="switch switch-xs">
+    <input type="checkbox" id="switch-xs">
+    <label for="switch-xs">XS</label>
+  </span>
+
+  <span class="switch switch-sm">
+    <input type="checkbox" id="switch-sm">
+    <label for="switch-sm">SM</label>
+  </span>
+
+  <span class="switch">
+    <input type="checkbox" id="switch-default">
+    <label for="switch-default">Default</label>
+  </span>
+
+  <span class="switch switch-lg">
+    <input type="checkbox" id="switch-lg">
+    <label for="switch-lg">LG</label>
+  </span>
+
+  <span class="switch switch-xl">
+    <input type="checkbox" id="switch-xl">
+    <label for="switch-xl">XL</label>
+  </span>
+</div>
+
+<p>Disabled switches are dimmed out. To disable a switch, add the <code>disabled</code> attribute to the checkbox (not the wrapper).</p>
+<pre><code class="lang-html">&lt;span class=&quot;switch&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; disabled id=&quot;switch-disabled&quot;&gt;
+  &lt;label for=&quot;switch-disabled&quot;&gt;Disabled&lt;/label&gt;
+&lt;/span&gt;
+</code></pre>
+<div class="input-field">
+  <span class="switch">
+    <input type="checkbox" disabled id="switch-disabled">
+    <label for="switch-disabled">Disabled</label>
+  </span>
+</div>
+
+
+<h3 id="variations">Variations</h3>
+<p>Use the <code>switch-*</code> modifier to create variations.</p>
+<pre><code class="lang-html">&lt;span class=&quot;switch switch-secondary&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;switch switch-success&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;switch switch-info&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;switch switch-warning&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;switch switch-danger&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;switch switch-light&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;switch switch-dark&quot;&gt;...&lt;/span&gt;
+</code></pre>
+<p><span class="switch switch-secondary">
+  <input type="checkbox" id="variation-secondary" checked>
+  <label for="variation-secondary">Secondary</label>
+</span></p>
+<p><span class="switch switch-success">
+  <input type="checkbox" id="variation-success" checked>
+  <label for="variation-success">Success</label>
+</span></p>
+<p><span class="switch switch-info">
+  <input type="checkbox" id="variation-info" checked>
+  <label for="variation-info">Info</label>
+</span></p>
+<p><span class="switch switch-warning">
+  <input type="checkbox" id="variation-warning" checked>
+  <label for="variation-warning">Warning</label>
+</span></p>
+<p><span class="switch switch-danger">
+  <input type="checkbox" id="variation-danger" checked>
+  <label for="variation-danger">Danger</label>
+</span></p>
+<p><span class="switch switch-light">
+  <input type="checkbox" id="variation-light" checked>
+  <label for="variation-light">Light</label>
+</span></p>
+<p><span class="switch switch-dark">
+  <input type="checkbox" id="variation-dark" checked>
+  <label for="variation-dark">Dark</label>
+</span></p>
+
+        </div>
+      </div>
+  </main>
+
+  <footer id="foot">
+    <a href="../index.html">
+      <img src="../source/img/wordmark.svg" alt="Shoelace logo">
+    </a>
+
+    <p class="text-small text-secondary">
+      1.0.0-beta24
+    </p>
+
+    <p class="mar-y-sm text-center">
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/fork" data-size="large" aria-label="Fork claviska/shoelace-css on GitHub">Fork</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/releases" data-icon="octicon-cloud-download" data-size="large" aria-label="Download claviska/shoelace-css on GitHub">Download</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue claviska/shoelace-css on GitHub">Report a Bug</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star claviska/shoelace-css on GitHub">Star</a>
+    </p>
+
+    <p>
+      <a href="https://twitter.com/shoelacecss" class="button button-info" style="margin-bottom: 1.2rem;">Follow</a>
+      <a href="https://paypal.me/claviska" class="button button-success" style="margin-bottom: 1.2rem;">Donate</a>
+    </p>
+
+    <p class="text-small text-secondary">
+      <a href="https://keycdn.com/" class="text-secondary">Accelerated by KeyCDN</a> &middot;
+      &copy; A Beautiful Site, LLC
+    </p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+  <script src="../dist/shoelace.js"></script>
+  <script>
+    $(function() {
+      // Highlight current nav item
+      $('#nav a').each(function() {
+        if(this.pathname === location.pathname) {
+          $(this).addClass('current');
+        }
+      });
+
+      // Intercept dropdown clicks for the demo
+      $('.dropdown').on('select', function(event) {
+        event.preventDefault();
+      });
+    });
+  </script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="These progress bars are easy to create and render consistently in all browsers.">
+  <link rel="icon" href="../source/img/favicon.png">
+  <link rel="stylesheet" href="../dist/shoelace.css">
+  <link rel="stylesheet" href="../source/css/_docs.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/AGMStudio/prism-theme-one-dark/f81fe477/prism-onedark.css">
+  <title>Progress Bars</title>
+</head>
+<body>
+
+  <header id="head" class="text-center">
+    <h1>
+      <a href="../index.html">
+        <img src="../source/img/wordmark.svg" alt="Shoelace logo">
+      </a>
+    </h1>
+
+    <p class="text-secondary text-small">
+      A back to the basics CSS starter kit. For when you don’t need the whole boot.
+    </p>
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul id="nav">
+          <li><a href="installing.html">Installing</a></li>
+          <li><a href="customizing.html">Customizing</a></li>
+          <li><a href="content.html">Content</a></li>
+          <li><a href="alerts.html">Alerts</a></li>
+          <li><a href="badges.html">Badges</a></li>
+          <li><a href="buttons.html">Buttons</a></li>
+          <li><a href="dropdowns.html">Dropdowns</a></li>
+          <li><a href="file-buttons.html">File Buttons</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="grid-system.html">Grid System</a></li>
+          <li><a href="loaders.html">Loaders</a></li>
+          <li><a href="progress-bars.html">Progress Bars</a></li>
+          <li><a href="switches.html">Switches</a></li>
+          <li><a href="tabs.html">Tabs</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="utilities.html">Utilities</a></li>
+          <li><a href="icons.html">Icons</a></li>
+          <li><a href="browser-support.html">Browser Support</a></li>
+          <li><a href="attribution.html">Attribution</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-9">
+        <div id="content">
+          <h2 id="progress-bars">Progress Bars</h2>
+<p>HTML5 introduced the <code>&lt;progress&gt;</code> element, but it’s not currently possible to style consistently in all browsers. As a result, Shoelace offers a custom alternative.</p>
+<p>Create a progress bar with the following markup. Use the <code>progress-[xs|sm|lg|xl]</code> modifiers to change the size. To set the state, use a <a href="utilities.html#sizing-utilities">sizing utility</a> or set the width explicitly on the <code>progress-bar</code> element.</p>
+<p>An optional text label can be included inside the <code>progress-bar</code> element.</p>
+<pre><code class="lang-html">&lt;div class=&quot;progress progress-xs&quot;&gt;
+  &lt;div class=&quot;progress-bar w-20&quot;&gt;20%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;progress progress-sm&quot;&gt;
+  &lt;div class=&quot;progress-bar w-40&quot;&gt;40%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar w-60&quot;&gt;60%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;progress progress-lg&quot;&gt;
+  &lt;div class=&quot;progress-bar w-70&quot;&gt;80%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;progress progress-xl&quot;&gt;
+  &lt;div class=&quot;progress-bar w-100&quot;&gt;100%&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="progress progress-xs">
+  <div class="progress-bar w-20">20%</div>
+</div>
+
+<div class="progress progress-sm">
+  <div class="progress-bar w-40">40%</div>
+</div>
+
+<div class="progress">
+  <div class="progress-bar w-60">60%</div>
+</div>
+
+<div class="progress progress-lg">
+  <div class="progress-bar w-70">80%</div>
+</div>
+
+<div class="progress progress-xl">
+  <div class="progress-bar w-100">100%</div>
+</div>
+
+<p>When progress can’t be determined, use the <code>progress-indeterminate</code> modifier to set an indeterminate state.</p>
+<pre><code class="lang-html">&lt;div class=&quot;progress progress-indeterminate&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="progress progress-indeterminate">
+  <div class="progress-bar"></div>
+</div>
+
+<h3 id="variations">Variations</h3>
+<p>Use the <code>progress-*</code> modifier to create variations.</p>
+<pre><code class="lang-html">&lt;div class=&quot;progress progress-secondary&quot;&gt;
+  &lt;div class=&quot;progress-bar w-50&quot;&gt;50%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;progress progress-success&quot;&gt;
+  &lt;div class=&quot;progress-bar w-50&quot;&gt;50%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;progress progress-info&quot;&gt;
+  &lt;div class=&quot;progress-bar w-50&quot;&gt;50%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;progress progress-warning&quot;&gt;
+  &lt;div class=&quot;progress-bar w-50&quot;&gt;50%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;progress progress-danger&quot;&gt;
+  &lt;div class=&quot;progress-bar w-50&quot;&gt;50%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;progress progress-light&quot;&gt;
+  &lt;div class=&quot;progress-bar w-50&quot;&gt;50%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;progress progress-dark&quot;&gt;
+  &lt;div class=&quot;progress-bar w-50&quot;&gt;50%&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="progress progress-secondary">
+  <div class="progress-bar w-50">50%</div>
+</div>
+
+<div class="progress progress-success">
+  <div class="progress-bar w-50">50%</div>
+</div>
+
+<div class="progress progress-info">
+  <div class="progress-bar w-50">50%</div>
+</div>
+
+<div class="progress progress-warning">
+  <div class="progress-bar w-50">50%</div>
+</div>
+
+<div class="progress progress-danger">
+  <div class="progress-bar w-50">50%</div>
+</div>
+
+<div class="progress progress-light">
+  <div class="progress-bar w-50">50%</div>
+</div>
+
+<div class="progress progress-dark">
+  <div class="progress-bar w-50">50%</div>
+</div>
+
+        </div>
+      </div>
+  </main>
+
+  <footer id="foot">
+    <a href="../index.html">
+      <img src="../source/img/wordmark.svg" alt="Shoelace logo">
+    </a>
+
+    <p class="text-small text-secondary">
+      1.0.0-beta24
+    </p>
+
+    <p class="mar-y-sm text-center">
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/fork" data-size="large" aria-label="Fork claviska/shoelace-css on GitHub">Fork</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/releases" data-icon="octicon-cloud-download" data-size="large" aria-label="Download claviska/shoelace-css on GitHub">Download</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue claviska/shoelace-css on GitHub">Report a Bug</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star claviska/shoelace-css on GitHub">Star</a>
+    </p>
+
+    <p>
+      <a href="https://twitter.com/shoelacecss" class="button button-info" style="margin-bottom: 1.2rem;">Follow</a>
+      <a href="https://paypal.me/claviska" class="button button-success" style="margin-bottom: 1.2rem;">Donate</a>
+    </p>
+
+    <p class="text-small text-secondary">
+      <a href="https://keycdn.com/" class="text-secondary">Accelerated by KeyCDN</a> &middot;
+      &copy; A Beautiful Site, LLC
+    </p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+  <script src="../dist/shoelace.js"></script>
+  <script>
+    $(function() {
+      // Highlight current nav item
+      $('#nav a').each(function() {
+        if(this.pathname === location.pathname) {
+          $(this).addClass('current');
+        }
+      });
+
+      // Intercept dropdown clicks for the demo
+      $('.dropdown').on('select', function(event) {
+        event.preventDefault();
+      });
+    });
+  </script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

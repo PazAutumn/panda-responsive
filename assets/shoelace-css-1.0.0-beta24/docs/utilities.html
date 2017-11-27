@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Use these utilities for quick prototyping.">
+  <link rel="icon" href="../source/img/favicon.png">
+  <link rel="stylesheet" href="../dist/shoelace.css">
+  <link rel="stylesheet" href="../source/css/_docs.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/AGMStudio/prism-theme-one-dark/f81fe477/prism-onedark.css">
+  <title>Utilities</title>
+</head>
+<body>
+
+  <header id="head" class="text-center">
+    <h1>
+      <a href="../index.html">
+        <img src="../source/img/wordmark.svg" alt="Shoelace logo">
+      </a>
+    </h1>
+
+    <p class="text-secondary text-small">
+      A back to the basics CSS starter kit. For when you don’t need the whole boot.
+    </p>
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul id="nav">
+          <li><a href="installing.html">Installing</a></li>
+          <li><a href="customizing.html">Customizing</a></li>
+          <li><a href="content.html">Content</a></li>
+          <li><a href="alerts.html">Alerts</a></li>
+          <li><a href="badges.html">Badges</a></li>
+          <li><a href="buttons.html">Buttons</a></li>
+          <li><a href="dropdowns.html">Dropdowns</a></li>
+          <li><a href="file-buttons.html">File Buttons</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="grid-system.html">Grid System</a></li>
+          <li><a href="loaders.html">Loaders</a></li>
+          <li><a href="progress-bars.html">Progress Bars</a></li>
+          <li><a href="switches.html">Switches</a></li>
+          <li><a href="tabs.html">Tabs</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="utilities.html">Utilities</a></li>
+          <li><a href="icons.html">Icons</a></li>
+          <li><a href="browser-support.html">Browser Support</a></li>
+          <li><a href="attribution.html">Attribution</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-9">
+        <div id="content">
+          <h2 id="utilities">Utilities</h2>
+<p>Shoelace provides a number of helpful utilities that make designing and prototyping easier.</p>
+<h3 id="background-utilities">Background Utilities</h3>
+<p>Background utilities can be applied to change an element’s background color.</p>
+<pre><code class="lang-html">&lt;div class=&quot;bg-primary&quot;&gt;Primary&lt;/div&gt;
+&lt;div class=&quot;bg-secondary&quot;&gt;Secondary&lt;/div&gt;
+&lt;div class=&quot;bg-success&quot;&gt;Success&lt;/div&gt;
+&lt;div class=&quot;bg-info&quot;&gt;Info&lt;/div&gt;
+&lt;div class=&quot;bg-warning&quot;&gt;Warning&lt;/div&gt;
+&lt;div class=&quot;bg-danger&quot;&gt;Danger&lt;/div&gt;
+&lt;div class=&quot;bg-light&quot;&gt;Light&lt;/div&gt;
+&lt;div class=&quot;bg-dark&quot;&gt;Dark&lt;/div&gt;
+</code></pre>
+<div class="mar-b-sm pad-sm bg-primary text-light">Primary</div>
+<div class="mar-b-sm pad-sm bg-secondary text-light">Secondary</div>
+<div class="mar-b-sm pad-sm bg-success text-light">Success</div>
+<div class="mar-b-sm pad-sm bg-info text-light">Info</div>
+<div class="mar-b-sm pad-sm bg-warning text-light">Warning</div>
+<div class="mar-b-sm pad-sm bg-danger text-light">Danger</div>
+<div class="mar-b-sm pad-sm bg-light text-dark">Light</div>
+<div class="mar-b-sm pad-sm bg-dark text-light">Dark</div>
+
+<h3 id="breakpoint-utilities">Breakpoint Utilities</h3>
+<p>Responsive breakpoints exist for five tiers of screen sizes. By default, the breakpoints are:</p>
+<ul>
+<li><code>xs</code> &rarr; 575px and below</li>
+<li><code>sm</code> &rarr; 576px – 767px</li>
+<li><code>md</code> &rarr; 768px – 991px</li>
+<li><code>lg</code> &rarr; 992px - 1199px</li>
+<li><code>xl</code> &rarr; 1200px and above</li>
+</ul>
+<p>If you’re building Shoelace from source, you can use the custom media queries found in <a href="../source/css/variables.css"><code>source/css/variables.css</code></a> to easily target various breakpoints without hard-coding screen sizes in your stylesheet.</p>
+<pre><code class="lang-css">@media (--breakpoint-xs-up) { /* xs screens and above */ }
+@media (--breakpoint-sm-up) { /* sm screens and above */ }
+@media (--breakpoint-md-up) { /* md screens and above */ }
+@media (--breakpoint-lg-up) { /* lg screens and above */ }
+@media (--breakpoint-xl-up) { /* xl screens and above */ }
+
+@media (--breakpoint-xs-down) { /* xs screens and below */ }
+@media (--breakpoint-sm-down) { /* sm screens and below */ }
+@media (--breakpoint-md-down) { /* md screens and below */ }
+@media (--breakpoint-lg-down) { /* lg screens and below */ }
+@media (--breakpoint-xl-down) { /* xl screens and below */ }
+
+@media (--breakpoint-xs-only) { /* xs screens only */ }
+@media (--breakpoint-sm-only) { /* sm screens only */ }
+@media (--breakpoint-md-only) { /* md screens only */ }
+@media (--breakpoint-lg-only) { /* lg screens only */ }
+@media (--breakpoint-xl-only) { /* xl screens only */ }
+</code></pre>
+<h3 id="display-utilities">Display Utilities</h3>
+<p>Display utilities let you hide elements based on the current breakpoint. Use <code>hide-[xs|sm|md|lg|xl]</code> to hide an element only at a specific viewport. Use <code>hide-*-up</code> to hide an element at and above a specific breakpoint. Use <code>hide-*-down</code> to hide an element at and below a specific breakpoint.</p>
+<pre><code class="lang-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-2 hide-xs&quot;&gt;hide-xs&lt;/div&gt;
+  &lt;div class=&quot;col-2 hide-sm&quot;&gt;hide-sm&lt;/div&gt;
+  &lt;div class=&quot;col-2 hide-md&quot;&gt;hide-md&lt;/div&gt;
+  &lt;div class=&quot;col-2 hide-lg&quot;&gt;hide-lg&lt;/div&gt;
+  &lt;div class=&quot;col-2 hide-xl&quot;&gt;hide-xl&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="container grid-example">
+  <div class="row">
+    <div class="col-2 hide-xs">hide-xs</div>
+    <div class="col-2 hide-sm">hide-sm</div>
+    <div class="col-2 hide-md">hide-md</div>
+    <div class="col-2 hide-lg">hide-lg</div>
+    <div class="col-2 hide-xl">hide-xl</div>
+  </div>
+</div>
+
+<h3 id="float-utilities">Float Utilities</h3>
+<p>Float utilities are provided to easily float elements to the left or right. Just apply the <code>float-left</code> or <code>float-right</code> class to an element to float it left or right.</p>
+<p>A clearfix utility is also available to clear floated elements. Just apply the <code>clearfix</code> class to the appropriate element.</p>
+<h3 id="sizing-utilities">Sizing Utilities</h3>
+<p>Sizing utilities can be used to set a relative width or height on any element. Just apply a <code>w-*</code> or <code>h-*</code> class and the appropriate element will be sized accordingly. Sizes are available as percentages from 0 – 100 in multiples of five.</p>
+<p>You can also use the <code>w-max-100</code> and <code>h-max-100</code> classes to set a max width and height of 100%.</p>
+<pre><code class="lang-html">&lt;div class=&quot;w-25&quot;&gt;25%&lt;/div&gt;
+&lt;div class=&quot;w-50&quot;&gt;50%&lt;/div&gt;
+&lt;div class=&quot;w-75&quot;&gt;75%&lt;/div&gt;
+&lt;div class=&quot;w-100&quot;&gt;100%&lt;/div&gt;
+
+&lt;div class=&quot;h-25&quot;&gt;25%&lt;/div&gt;
+&lt;div class=&quot;h-50&quot;&gt;50%&lt;/div&gt;
+&lt;div class=&quot;h-75&quot;&gt;75%&lt;/div&gt;
+&lt;div class=&quot;h-100&quot;&gt;100%&lt;/div&gt;
+</code></pre>
+<div class="width-sizing-example">
+  <div class="w-25">25%</div>
+  <div class="w-50">50%</div>
+  <div class="w-75">75%</div>
+  <div class="w-100">100%</div>
+</div>
+
+<div class="height-sizing-example">
+  <div class="h-25">25%</div>
+  <div class="h-50">50%</div>
+  <div class="h-75">75%</div>
+  <div class="h-100">100%</div>
+</div>
+
+<h3 id="spacing-utilities">Spacing Utilities</h3>
+<p>Spacing utilities can be used to add or remove paddings and margins to any element. Just apply the desired class and the appropriate element will receive the respective padding/margin.</p>
+<p>Class names are prefixed with <code>pad-</code> or <code>mar-</code> for padding and margin, respectively. To apply spacing to all sides of an element, use the following classes.</p>
+<pre><code>pad-[0|xs|sm|md|lg|xl]
+mar-[0|xs|sm|md|lg|xl]
+</code></pre><p>Example:</p>
+<pre><code class="lang-html">&lt;div class=&quot;pad-0 mar-xl&quot;&gt;
+</code></pre>
+<p>To apply spacing to a specific side of an element, use one or more of the following classes indicating top, right, bottom, left, x (horizontal), and y (vertical):</p>
+<pre><code>pad-[t|r|b|l|x|y]-[0|xs|sm|md|lg|xl]
+mar-[t|r|b|l|x|y]-[0|xs|sm|md|lg|xl]
+</code></pre><p>Example:</p>
+<pre><code class="lang-html">&lt;div class=&quot;pad-l-md mar-b-0&quot;&gt;
+</code></pre>
+<p>You can also use <code>mar-[x|y|xy]-auto</code> to set automatic margins horizontally and/or vertically.</p>
+<h3 id="text-utilities">Text Utilities</h3>
+<p>Text utility classes can be applied to change the appearance of text.</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>text-primary</code></td>
+      <td class="text-primary">This is primary text</td>
+    </tr>
+    <tr>
+      <td><code>text-secondary</code></td>
+      <td class="text-secondary">This is secondary text</td>
+    </tr>
+    <tr>
+      <td><code>text-success</code></td>
+      <td class="text-success">This is success text</td>
+    </tr>
+    <tr>
+      <td><code>text-info</code></td>
+      <td class="text-info">This is info text</td>
+    </tr>
+    <tr>
+      <td><code>text-warning</code></td>
+      <td class="text-warning">This is warning text</td>
+    </tr>
+    <tr>
+      <td><code>text-danger</code></td>
+      <td class="text-danger">This is danger text</td>
+    </tr>
+    <tr>
+      <td><code>text-light</code></td>
+      <td class="text-light">This is light text</td>
+    </tr>
+    <tr>
+      <td><code>text-dark</code></td>
+      <td class="text-dark">This is dark text</td>
+    </tr>
+    <tr>
+      <td><code>text-small</code></td>
+      <td class="text-small">This is small text</td>
+    </tr>
+    <tr>
+      <td><code>text-bold</code></td>
+      <td class="text-bold">This is bold text</td>
+    </tr>
+    <tr>
+      <td><code>text-italic</code></td>
+      <td class="text-italic">This is italic text</td>
+    </tr>
+    <tr>
+      <td><code>text-muted</code></td>
+      <td class="text-muted">This is muted text</td>
+    </tr>
+    <tr>
+      <td><code>text-left</code></td>
+      <td class="text-left">This is left-aligned text</td>
+    </tr>
+    <tr>
+      <td><code>text-center</code></td>
+      <td class="text-center">This is centered text</td>
+    </tr>
+    <tr>
+      <td><code>text-right</code></td>
+      <td class="text-right">This is right-aligned text</td>
+    </tr>
+    <tr>
+      <td><code>text-justify</code></td>
+      <td class="text-justify">This is justified text</td>
+    </tr>
+    <tr>
+      <td><code>text-nowrap</code></td>
+      <td class="text-nowrap">This is text that won’t wrap</td>
+    </tr>
+    <tr>
+      <td><code>text-lowercase</code></td>
+      <td class="text-lowercase">This is lowercase text</td>
+    </tr>
+    <tr>
+      <td><code>text-uppercase</code></td>
+      <td class="text-uppercase">This is uppercase text</td>
+    </tr>
+    <tr>
+      <td><code>text-capitalize</code></td>
+      <td class="text-capitalize">This is capitalized text</td>
+    </tr>
+  </tbody>
+</table>
+
+        </div>
+      </div>
+  </main>
+
+  <footer id="foot">
+    <a href="../index.html">
+      <img src="../source/img/wordmark.svg" alt="Shoelace logo">
+    </a>
+
+    <p class="text-small text-secondary">
+      1.0.0-beta24
+    </p>
+
+    <p class="mar-y-sm text-center">
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/fork" data-size="large" aria-label="Fork claviska/shoelace-css on GitHub">Fork</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/releases" data-icon="octicon-cloud-download" data-size="large" aria-label="Download claviska/shoelace-css on GitHub">Download</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue claviska/shoelace-css on GitHub">Report a Bug</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star claviska/shoelace-css on GitHub">Star</a>
+    </p>
+
+    <p>
+      <a href="https://twitter.com/shoelacecss" class="button button-info" style="margin-bottom: 1.2rem;">Follow</a>
+      <a href="https://paypal.me/claviska" class="button button-success" style="margin-bottom: 1.2rem;">Donate</a>
+    </p>
+
+    <p class="text-small text-secondary">
+      <a href="https://keycdn.com/" class="text-secondary">Accelerated by KeyCDN</a> &middot;
+      &copy; A Beautiful Site, LLC
+    </p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+  <script src="../dist/shoelace.js"></script>
+  <script>
+    $(function() {
+      // Highlight current nav item
+      $('#nav a').each(function() {
+        if(this.pathname === location.pathname) {
+          $(this).addClass('current');
+        }
+      });
+
+      // Intercept dropdown clicks for the demo
+      $('.dropdown').on('select', function(event) {
+        event.preventDefault();
+      });
+    });
+  </script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

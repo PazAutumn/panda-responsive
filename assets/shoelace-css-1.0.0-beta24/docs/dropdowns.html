@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Add beautiful menus to your app with dropdowns.">
+  <link rel="icon" href="../source/img/favicon.png">
+  <link rel="stylesheet" href="../dist/shoelace.css">
+  <link rel="stylesheet" href="../source/css/_docs.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/AGMStudio/prism-theme-one-dark/f81fe477/prism-onedark.css">
+  <title>Dropdowns</title>
+</head>
+<body>
+
+  <header id="head" class="text-center">
+    <h1>
+      <a href="../index.html">
+        <img src="../source/img/wordmark.svg" alt="Shoelace logo">
+      </a>
+    </h1>
+
+    <p class="text-secondary text-small">
+      A back to the basics CSS starter kit. For when you don’t need the whole boot.
+    </p>
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul id="nav">
+          <li><a href="installing.html">Installing</a></li>
+          <li><a href="customizing.html">Customizing</a></li>
+          <li><a href="content.html">Content</a></li>
+          <li><a href="alerts.html">Alerts</a></li>
+          <li><a href="badges.html">Badges</a></li>
+          <li><a href="buttons.html">Buttons</a></li>
+          <li><a href="dropdowns.html">Dropdowns</a></li>
+          <li><a href="file-buttons.html">File Buttons</a></li>
+          <li><a href="forms.html">Forms</a></li>
+          <li><a href="grid-system.html">Grid System</a></li>
+          <li><a href="loaders.html">Loaders</a></li>
+          <li><a href="progress-bars.html">Progress Bars</a></li>
+          <li><a href="switches.html">Switches</a></li>
+          <li><a href="tabs.html">Tabs</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="utilities.html">Utilities</a></li>
+          <li><a href="icons.html">Icons</a></li>
+          <li><a href="browser-support.html">Browser Support</a></li>
+          <li><a href="attribution.html">Attribution</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-9">
+        <div id="content">
+          <h2 id="dropdowns">Dropdowns</h2>
+<p>Dropdowns can be created using the markup below. You can use a <code>&lt;button&gt;</code> or an <code>&lt;a&gt;</code> as a trigger. Dropdown indicators (i.e. carets) are added for you. Menu items are simply <code>&lt;a&gt;</code> elements. Dividers are simply <code>&lt;hr&gt;</code> elements.</p>
+<p>Note the class names used for the main container, the trigger, and the menu. Additionally, menu items can be disabled by adding the <code>disabled</code> class. Menu items can also be given a checked state using the <code>checked</code> class.</p>
+<p>To disable a dropdown entirely, add the <code>disabled</code> property to the dropdown trigger if it’s a button. If it’s a link, add the <code>disabled</code> class instead. When a dropdown is activated, it will receive the <code>active</code> class and the menu will show.</p>
+<p>Headings can be created with the <code>dropdown-heading</code> class.</p>
+<pre><code class="lang-html">&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;dropdown-trigger&quot;&gt;Dropdown&lt;/button&gt;
+  &lt;div class=&quot;dropdown-menu&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Item 2&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Item 3&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;checked&quot;&gt;Checked&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;disabled&quot;&gt;Disabled&lt;/a&gt;
+    &lt;hr&gt;
+    &lt;div class=&quot;dropdown-heading&quot;&gt;Heading&lt;/div&gt;
+    &lt;a href=&quot;#&quot;&gt;More...&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="input-field">
+  <div class="dropdown">
+    <button type="button" class="dropdown-trigger">Dropdown</button>
+    <div class="dropdown-menu">
+      <a href="#">Item 1</a>
+      <a href="#">Item 2</a>
+      <a href="#">Item 3</a>
+      <a href="#" class="checked">Checked</a>
+      <a href="#" class="disabled">Disabled</a>
+      <hr>
+      <div class="dropdown-heading">Heading</div>
+      <a href="#">More...</a>
+    </div>
+  </div>
+</div>
+
+<p>Use the <code>dropdown-top</code> and <code>dropdown-left</code> modifiers to change the positioning of the menu. You can combine these modifiers as needed.</p>
+<pre><code class="lang-html">&lt;div class=&quot;dropdown dropdown-top&quot;&gt;
+  ...
+&lt;/div&gt;
+
+&lt;div class=&quot;dropdown dropdown-left&quot;&gt;
+  ...
+&lt;/div&gt;
+
+&lt;div class=&quot;dropdown dropdown-top dropdown-left&quot;&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+<div class="input-field">
+  <div class="dropdown dropdown-top">
+    <button type="button" class="dropdown-trigger">Top</button>
+    <div class="dropdown-menu">
+      <a href="#">Item 1</a>
+      <a href="#">Item 2</a>
+      <a href="#">Item 3</a>
+    </div>
+  </div>
+
+  <div class="dropdown dropdown-left">
+    <button type="button" class="dropdown-trigger">Left</button>
+    <div class="dropdown-menu">
+      <a href="#">Item 1</a>
+      <a href="#">Item 2</a>
+      <a href="#">Item 3</a>
+    </div>
+  </div>
+
+  <div class="dropdown dropdown-top dropdown-left">
+    <button type="button" class="dropdown-trigger">Top Left</button>
+    <div class="dropdown-menu">
+      <a href="#">Item 1</a>
+      <a href="#">Item 2</a>
+      <a href="#">Item 3</a>
+    </div>
+  </div>
+</div>
+
+<p>Dropdowns with button triggers can be used inside input groups.</p>
+<pre><code class="lang-html">&lt;div class=&quot;input-group&quot;&gt;
+  &lt;span class=&quot;input-addon&quot;&gt;$&lt;/span&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;10.00&quot;&gt;
+
+  &lt;div class=&quot;dropdown dropdown-left&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;dropdown-trigger&quot;&gt;Currency&lt;/button&gt;
+    &lt;div class=&quot;dropdown-menu&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;checked&quot;&gt;USD&lt;/a&gt;
+      &lt;a href=&quot;#&quot;&gt;AUD&lt;/a&gt;
+      &lt;a href=&quot;#&quot;&gt;CAD&lt;/a&gt;
+      &lt;a href=&quot;#&quot;&gt;GBP&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="input-group">
+  <span class="input-addon">$</span>
+  <input type="text" placeholder="10.00">
+
+  <div class="dropdown dropdown-left">
+    <button type="button" class="dropdown-trigger">Currency</button>
+    <div class="dropdown-menu">
+      <a href="#" class="checked">USD</a>
+      <a href="#">AUD</a>
+      <a href="#">CAD</a>
+      <a href="#">GBP</a>
+    </div>
+  </div>
+</div>
+
+<h3 id="interactivity">Interactivity</h3>
+<p>Dropdowns require <code>shoelace.js</code> for interactivity. You don’t need to initialize anything. Just include the script and everything “just works.”</p>
+<p>There is no JavaScript API. Shoelace’s philosophy believes that custom components should act like native components as much as possible. You can, however, listen for various events.</p>
+<ul>
+<li><code>show</code> – Fires when a dropdown is shown.</li>
+<li><code>hide</code> – Fires when a dropdown is hidden.</li>
+<li><code>select</code> – Fires when a dropdown menu item is selected. The second callback argument is a reference to the respective menu item.</li>
+</ul>
+<p>This example will log all three events for a dropdown with an id of <code>my-dropdown</code>.</p>
+<pre><code class="lang-javascript">$(&#39;#my-dropdown&#39;)
+  .on(&#39;show&#39;, function(event) {
+    console.log(&#39;show&#39;, event.target);
+  })
+  .on(&#39;hide&#39;, function(event) {
+    console.log(&#39;hide&#39;, event.target);
+  })
+  .on(&#39;select&#39;, function(event, item) {
+    console.log(&#39;select&#39;, event.target, item);
+
+    // Tip: Use event.preventDefault() to
+    // intercept the original click event.
+  });
+</code></pre>
+<p>To show or hide a dropdown programmatically, just add or remove the <code>active</code> class to the dropdown.</p>
+<pre><code class="lang-javascript">// Show the dropdown
+$(&#39;#my-dropdown&#39;).addClass(&#39;active&#39;);
+
+// Hide the dropdown
+$(&#39;#my-dropdown&#39;).removeClass(&#39;active&#39;);
+</code></pre>
+
+        </div>
+      </div>
+  </main>
+
+  <footer id="foot">
+    <a href="../index.html">
+      <img src="../source/img/wordmark.svg" alt="Shoelace logo">
+    </a>
+
+    <p class="text-small text-secondary">
+      1.0.0-beta24
+    </p>
+
+    <p class="mar-y-sm text-center">
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/fork" data-size="large" aria-label="Fork claviska/shoelace-css on GitHub">Fork</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/releases" data-icon="octicon-cloud-download" data-size="large" aria-label="Download claviska/shoelace-css on GitHub">Download</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue claviska/shoelace-css on GitHub">Report a Bug</a>
+      <a class="github-button" href="https://github.com/claviska/shoelace-css" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star claviska/shoelace-css on GitHub">Star</a>
+    </p>
+
+    <p>
+      <a href="https://twitter.com/shoelacecss" class="button button-info" style="margin-bottom: 1.2rem;">Follow</a>
+      <a href="https://paypal.me/claviska" class="button button-success" style="margin-bottom: 1.2rem;">Donate</a>
+    </p>
+
+    <p class="text-small text-secondary">
+      <a href="https://keycdn.com/" class="text-secondary">Accelerated by KeyCDN</a> &middot;
+      &copy; A Beautiful Site, LLC
+    </p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+  <script src="../dist/shoelace.js"></script>
+  <script>
+    $(function() {
+      // Highlight current nav item
+      $('#nav a').each(function() {
+        if(this.pathname === location.pathname) {
+          $(this).addClass('current');
+        }
+      });
+
+      // Intercept dropdown clicks for the demo
+      $('.dropdown').on('select', function(event) {
+        event.preventDefault();
+      });
+    });
+  </script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
